@@ -1,0 +1,12 @@
+name: Auto Restart VPS
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Keep Alive
+        run: echo "VPS still alive at $(date)"
